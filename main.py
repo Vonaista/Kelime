@@ -109,7 +109,7 @@ def set_master(update, context):
     change_word_btn = InlineKeyboardButton("❗Kelimeyi Değiştir", callback_data='change_word')
 
     keyboard = [[show_word_btn], [change_word_btn]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
+    reply_markup = InlineKeyboardMarkup(keyboard):
 
     update.message.reply_text('Sıradaki Oyuncu [{}](tg://user?id={})'.format(username,user_id), reply_to_message_id=True, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
 
