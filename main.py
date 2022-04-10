@@ -68,9 +68,9 @@ def button(update, context):
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
         
-        addme = InlineKeyboardButton(text="🕹Beni Bir Gruba Ekleyin!", url="https://t.me/deerwordbot?startgroup=a")
-        sohbet = InlineKeyboardButton(text="💬Sohbet Grubumuz", url="https://t.me/geyiklobisi")
-        admin = InlineKeyboardButton(text="💂 Sahibim", url="https://t.me/ixelizm")
+        addme = InlineKeyboardButton(text="🕹Beni Bir Gruba Ekleyin!", url="https://t.me/SairKelimeBot?startgroup=a")
+        sohbet = InlineKeyboardButton(text="💬 Kanal", url="https://t.me/Sairingunlugu")
+        admin = InlineKeyboardButton(text="💂 Sahibim", url="https://t.me/Sairbey")
 
         keyboard = [[addme],[sohbet],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -88,7 +88,7 @@ def command_start(update, context: CallbackContext):
         game = get_or_create_game(chat_id)
         game.start()
 
-        update.message.reply_text('DeerWord Oyunu Başladı📣'.format(username), reply_to_message_id=True)
+        update.message.reply_text('SairKelime Oyunu Başladı📣'.format(username), reply_to_message_id=True)
 
         set_master(update, context)
 
